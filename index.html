@@ -9,6 +9,22 @@
     <title>Vue Slider</title>
 </head>
 <body>
+    <div id="root" class="container">
+        <div id="slider">
+            <div id="left-arrow" @click="prevImage">
+                <i class="fas fa-angle-left"></i>
+            </div>
+            <div id="picture">
+                <img :src="images[counterImages]" alt="Paesaggio">
+            </div>
+            <div id="right-arrow" @click="nextImage">
+                <i class="fas fa-angle-right"></i>
+            </div>
+            <!-- <div id="nav">
+
+            </div> -->
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="main.js"></script>
 </body>
