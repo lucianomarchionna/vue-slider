@@ -18,7 +18,7 @@ const app = new Vue({
         },
         nextImage(){
             this.counterImages += 1;
-            if(this.counterImages == (this.images.length - 1)) this.counterImages = 0;
+            if(this.counterImages == this.images.length) this.counterImages = 0;
         }
     }
 })

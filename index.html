@@ -20,9 +20,9 @@
             <div id="right-arrow" @click="nextImage">
                 <i class="fas fa-angle-right"></i>
             </div>
-            <!-- <div id="nav">
-
-            </div> -->
+            <div id="nav">
+                <i :class="(index == counterImages) ? 'active' : null" class="fas fa-circle" v-for="(image, index) in images"></i>
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
