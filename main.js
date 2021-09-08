@@ -3,6 +3,7 @@ Vue.config.devtools = true;
 const app = new Vue({
     el: "#root",
     data: {
+        time: 0,
         counterImages: 0,
         images: [
             "img/image1.jpg",
@@ -19,6 +20,12 @@ const app = new Vue({
         nextImage(){
             this.counterImages += 1;
             if(this.counterImages == this.images.length) this.counterImages = 0;
+        },
+        switchImages(){
+            this.time = setInterval(this.nextImage, 3000);
         }
+    },
+    created(){
+        this.switchImages();
     }
 })
